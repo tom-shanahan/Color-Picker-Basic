@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="565119eb-3e70-4fb2-b761-dac9a980bcb8" name="Default Changelist" comment="" />
+    <list default="true" id="565119eb-3e70-4fb2-b761-dac9a980bcb8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ColorUtilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorUtilities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +21,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lObLz7yswUjQE0U1dUxnZesQD5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -76,7 +87,7 @@
       <workItem from="1607708277282" duration="21441000" />
       <workItem from="1607965101513" duration="594000" />
       <workItem from="1608070529492" duration="15176000" />
-      <workItem from="1608138329322" duration="21603000" />
+      <workItem from="1608138329322" duration="26988000" />
     </task>
     <servers />
   </component>

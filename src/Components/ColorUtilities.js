@@ -93,10 +93,15 @@ function hexToComplimentary(hex){
   return "#" + (0x1000000 | rgb).toString(16).substring(1);
 }
 
+function hexToMonochrome(hex) {
+  return tinycolor(hex).lighten(15).toString();
+}
+
 export {
   fromRatio,
   toFullColor,
   toHSV,
   toStringValue,
   hexToComplimentary,
+  hexToMonochrome,
 };
