@@ -1,0 +1,7 @@
+.theme-default {
+  color: inherit;
+
+  .hue-spectrum {
+    margin-left: 10px;
+  }
+}

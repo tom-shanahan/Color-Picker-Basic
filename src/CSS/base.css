@@ -1,0 +1,59 @@
+.saturation-spectrum,
+.hue-spectrum {
+  box-sizing: border-box;
+}
+
+.saturation-spectrum,
+.hue-spectrum {
+  position: relative;
+  display: inline-block;
+}
+
+.saturation-white,
+.saturation-black {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.saturation-white {
+  background: linear-gradient(to right, #fff, rgba(204,154,129,0));
+}
+.saturation-black {
+  background: linear-gradient(to top, #000, rgba(204,154,129,0));
+}
+
+.saturation-spectrum {
+  cursor: pointer;
+}
+.saturation-drag {
+  display: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  .saturation-inner,
+  .hue-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+}
+
+.hue-spectrum {
+  background: linear-gradient(to bottom, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+  cursor: pointer;
+
+  .hue-drag {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border: 1px solid #000;
+  }
+}
