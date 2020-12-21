@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="565119eb-3e70-4fb2-b761-dac9a980bcb8" name="Default Changelist" comment="">
+    <list default="true" id="565119eb-3e70-4fb2-b761-dac9a980bcb8" name="Default Changelist" comment="adding color swatches">
+      <change afterPath="$PROJECT_DIR$/src/Components/ColorEditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/RelatedColors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/spectrum.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/theme-default.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ColorUtilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorUtilities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HueSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HueSpectrum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SaturationSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SaturationSpectrum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +53,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -87,11 +96,39 @@
       <workItem from="1607708277282" duration="21441000" />
       <workItem from="1607965101513" duration="594000" />
       <workItem from="1608070529492" duration="15176000" />
-      <workItem from="1608138329322" duration="26988000" />
+      <workItem from="1608138329322" duration="27299000" />
+      <workItem from="1608224982675" duration="7086000" />
+      <workItem from="1608244252278" duration="18298000" />
+      <workItem from="1608311132692" duration="19979000" />
+      <workItem from="1608396695134" duration="5740000" />
+      <workItem from="1608421957423" duration="598000" />
+      <workItem from="1608514195547" duration="3927000" />
     </task>
+    <task id="LOCAL-00001" summary="adding color swatches">
+      <created>1608174478659</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608174478659</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding color swatches" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding color swatches" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/HueSpectrum.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

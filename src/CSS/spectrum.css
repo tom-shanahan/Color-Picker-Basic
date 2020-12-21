@@ -1,10 +1,6 @@
 .saturation-spectrum,
 .hue-spectrum {
   box-sizing: border-box;
-}
-
-.saturation-spectrum,
-.hue-spectrum {
   position: relative;
   display: inline-block;
 }
@@ -56,4 +52,8 @@
     width: 100%;
     border: 1px solid #000;
   }
+}
+
+.hue-spectrum {
+  margin-left: 10px;
 }

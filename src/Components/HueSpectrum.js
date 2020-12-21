@@ -23,7 +23,7 @@ class HueSpectrum extends Component {
         value: PropTypes.any,
         height: PropTypes.number,
         width: PropTypes.number,
-        pointerSize: PropTypes.number,
+        pointerSize: PropTypes.array,
     }
 
     static defaultProps = {
@@ -31,7 +31,7 @@ class HueSpectrum extends Component {
         value: null,
         height: 300,
         width: 30,
-        pointerSize: 3,
+        pointerSize: [4,28],
     }
 
     componentWillUnmount() {
@@ -88,7 +88,7 @@ class HueSpectrum extends Component {
     getPointerPosition() {
         const { height, pointerSize } = this.props;
         const position = Math.round(this.hsv.h * height / 360);
-        const diff = Math.round(pointerSize / 2);
+        const diff = Math.round(pointerSize[0] / 2);
         return position - diff;
     }
 
@@ -106,7 +106,8 @@ class HueSpectrum extends Component {
         };
 
         const pointerStyle = {
-            height: pointerSize,
+            height: pointerSize[0],
+            width: pointerSize[1],
             top: this.getPointerPosition(),
             display: 'block',
         };
