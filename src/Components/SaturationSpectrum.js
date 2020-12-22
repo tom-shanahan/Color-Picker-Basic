@@ -56,7 +56,7 @@ class SaturationSpectrum extends Component {
   }
 
   handleChange(event) {
-    this.handleMouseMove(event, this.container)
+    this.handleMouseMove(event)
     this.updateColor()
     this.props.onChange.apply(this,[this.hsv])
   }

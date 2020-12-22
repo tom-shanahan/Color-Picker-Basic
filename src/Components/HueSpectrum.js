@@ -48,7 +48,7 @@ class HueSpectrum extends Component {
     }
 
     handleChange(event) {
-        this.handleMouseMove(event, this.container);
+        this.handleMouseMove(event);
         this.updateHue();
         this.props.onChange.apply(this, [this.hsv])
     }
