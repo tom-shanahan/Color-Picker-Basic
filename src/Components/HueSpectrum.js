@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import tinycolor from "tinycolor2";
 import { toHSV } from './ColorUtilities';
 
 class HueSpectrum extends Component {
@@ -7,7 +8,6 @@ class HueSpectrum extends Component {
         super(props)
         this.state = {
             hue: 0,
-            pointerY: 0,
         }
         this.getPointerPosition = this.getPointerPosition.bind(this);
         this.updateHue = this.updateHue.bind(this);
@@ -48,19 +48,20 @@ class HueSpectrum extends Component {
     }
 
     handleChange(event) {
-        this.handleMouseMove(event);
-        this.updateHue();
-        this.props.onChange.apply(this, [this.hsv])
+        console.log("HUE TRIGGERED")
+        const yPos = this.handleMouseMove(event);
+        this.updateHue(yPos);
+        this.props.onChange(this.hsv)
     }
 
     handleMouseMove(event) {
         let bounds = document.getElementById('hueBar').getBoundingClientRect()
-        this.setState({ pointerY: (event.clientY - bounds.top) });
+        return (event.clientY - bounds.top);
     }
 
-    updateHue() {
-        let curY = Math.max(Math.min(this.state.pointerY, this.props.height),0)
-        this.hsv.h = curY * 360 / this.props.height;
+    updateHue(yPos) {
+        let curY = Math.max(Math.min(yPos, this.props.height),0)
+        this.hsv.h = Math.round((curY / this.props.height) * 360);
         const newHsv = {
             ...this.hsv,
         };
@@ -95,7 +96,7 @@ class HueSpectrum extends Component {
     render() {
         const { value, pointerSize, height, width } = this.props;
         const { hue } = this.state;
-        this.hsv = toHSV(value);
+        this.hsv = tinycolor(value).toHsv();
         // Prevents pointer from returning to top after max hue
         if (hue === 360 && this.hsv.h === 0) {
             this.hsv.h = 360;

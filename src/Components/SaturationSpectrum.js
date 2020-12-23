@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { toHSV, fromRatio } from './ColorUtilities';
 import throttle from 'lodash/throttle'
+import tinycolor from "tinycolor2";
 // import * as _ from underscore;
 
 class SaturationSpectrum extends Component {
@@ -58,7 +59,9 @@ class SaturationSpectrum extends Component {
   handleChange(event) {
     this.handleMouseMove(event)
     this.updateColor()
-    this.props.onChange.apply(this,[this.hsv])
+    this.hsv.h = null;
+    console.log("Sat change",this.hsv)
+    this.props.onChange(this.hsv)
   }
 
   handleMouseMove(event) {
@@ -101,11 +104,11 @@ class SaturationSpectrum extends Component {
 
   render() {
     const { value, pointerSize, height, width } = this.props;
-    this.hsv = toHSV(value);
+    this.hsv = tinycolor(value).toHsv();
     const spectrumSquareStyle = {
       height: height,
       width: width,
-      backgroundColor: fromRatio(this.hsv).toRgbString(),
+      backgroundColor: tinycolor(this.hsv).toRgbString(),
     };
 
     const pointerPos = this.getPointerPosition();

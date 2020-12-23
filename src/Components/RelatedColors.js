@@ -38,15 +38,15 @@ class RelatedColors extends Component {
         let color3 = null;
         let color4 = null;
 
-        let complementColor = tinycolor(this.props.color).complement();
-        let mono10 = tinycolor(this.props.color).lighten(10).toString();
-        let mono20 = tinycolor(this.props.color).lighten(20).toString();
-        let mono30 = tinycolor(this.props.color).lighten(30).toString();
+        let complementColor = tinycolor(this.props.color).complement().toHexString().toUpperCase();
+        let mono10 = tinycolor(this.props.color).lighten(10).toHexString().toUpperCase();
+        let mono20 = tinycolor(this.props.color).lighten(20).toHexString().toUpperCase();
+        let mono30 = tinycolor(this.props.color).lighten(30).toHexString().toUpperCase();
         let analogArray = tinycolor(this.props.color).analogous();
         let triadArray = tinycolor(this.props.color).triad();
         let tetradArray = tinycolor(this.props.color).tetrad();
 
-        let { color } = this.props;
+        let current = tinycolor(this.props.color).toHexString().toUpperCase();
         let { displayType } = this.state;
         switch (displayType) {
             default:
@@ -57,38 +57,38 @@ class RelatedColors extends Component {
                 color4 = null;
                 break;
             case 'Complementary Colors:':
-                color0 = color;
+                color0 = current;
                 color1 = complementColor;
                 color2 = null;
                 color3 = null;
                 color4 = null;
                 break;
             case 'Monochromatic Colors:':
-                color0 = color;
+                color0 = current;
                 color1 = mono10;
                 color2 = mono20;
                 color3 = mono30;
                 color4 = null;
                 break;
             case 'Analogous Colors:':
-                color0 = color;
-                color1 = analogArray[1].toHexString();
-                color2 = analogArray[2].toHexString();
-                color3 = analogArray[4].toHexString();
-                color4 = analogArray[5].toHexString();
+                color0 = current;
+                color1 = analogArray[1].toHexString().toUpperCase();
+                color2 = analogArray[2].toHexString().toUpperCase();
+                color3 = analogArray[4].toHexString().toUpperCase();
+                color4 = analogArray[5].toHexString().toUpperCase();
                 break;
             case 'Triadic Colors:':
-                color0 = color;
-                color1 = triadArray[1].toHexString();
-                color2 = triadArray[2].toHexString();
+                color0 = current;
+                color1 = triadArray[1].toHexString().toUpperCase();
+                color2 = triadArray[2].toHexString().toUpperCase();
                 color3 = null;
                 color4 = null;
                 break;
             case 'Tetradic Colors:':
-                color0 = color;
-                color1 = tetradArray[0].toHexString();
-                color2 = tetradArray[1].toHexString();
-                color3 = tetradArray[2].toHexString();
+                color0 = current;
+                color1 = tetradArray[0].toHexString().toUpperCase();
+                color2 = tetradArray[1].toHexString().toUpperCase();
+                color3 = tetradArray[2].toHexString().toUpperCase();
                 color4 = null;
                 break;
         }
@@ -120,29 +120,29 @@ class RelatedColors extends Component {
                 </div>
 
                 <div>
-                    <h4>{displayType}</h4>
+                    <h4>{ displayType }</h4>
                     {(color0 !== null) &&
-                    <div className="colorSwatches" style={{background: color0}}>
+                    <div className="colorSwatches" style={{ background: color0 }}>
                         {color0}
                         </div>
                     }
                     {(color1 !== null) &&
-                    <div className="colorSwatches" style={{background: color1}}>
+                    <div className="colorSwatches" style={{ background: color1 }}>
                         {color1}
                     </div>
                     }
                     {(color2 !== null) &&
-                    <div className="colorSwatches" style={{background: color2}}>
+                    <div className="colorSwatches" style={{ background: color2 }}>
                         {color2}
                     </div>
                     }
                     {(color3 !== null) &&
-                    <div className="colorSwatches" style={{background: color3}}>
+                    <div className="colorSwatches" style={{ background: color3 }}>
                         {color3}
                     </div>
                     }
                     {(color4 !== null) &&
-                    <div className="colorSwatches" style={{background: color4}}>
+                    <div className="colorSwatches" style={{ background: color4 }}>
                         {color4}
                     </div>
                     }

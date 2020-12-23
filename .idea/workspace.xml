@@ -5,9 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ColorEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ColorUtilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorUtilities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/DefaultColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/DefaultColor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/HueSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HueSpectrum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/RelatedColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RelatedColors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/SaturationSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SaturationSpectrum.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +95,8 @@
       <workItem from="1608396695134" duration="5740000" />
       <workItem from="1608421957423" duration="598000" />
       <workItem from="1608514195547" duration="4720000" />
-      <workItem from="1608570360803" duration="27068000" />
+      <workItem from="1608570360803" duration="27391000" />
+      <workItem from="1608656794319" duration="6030000" />
     </task>
     <task id="LOCAL-00001" summary="adding color swatches">
       <created>1608174478659</created>
@@ -111,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608518424082</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added rgb input">
+      <created>1608606317217</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608606317217</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +128,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding color swatches" />
     <MESSAGE value="added hex input" />
-    <option name="LAST_COMMIT_MESSAGE" value="added hex input" />
+    <MESSAGE value="added rgb input" />
+    <option name="LAST_COMMIT_MESSAGE" value="added rgb input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

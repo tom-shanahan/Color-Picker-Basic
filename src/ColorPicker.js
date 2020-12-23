@@ -19,34 +19,46 @@ class ColorPicker extends Component {
     }
 
     handleChange(color) {
-        const { r,g,b } = tinycolor(this.state.curColor).toRgb();
-        console.log(color);
-        if (color.r || color.r===0) {
+        console.log("Main",color);
+        console.log("CUR",tinycolor(this.state.curColor).toHsv());
+        if (color.r || color.g || color.b) {
+            var { r,g,b } = tinycolor(this.state.curColor).toRgb();
+            if (color.r || color.r===0) {
+                r = color.r
+            }
+            if (color.g || color.g===0) {
+                g = color.g
+            }
+            if (color.b || color.b===0) {
+                b = color.b
+            }
             this.setState({
-                curColor: tinycolor({ r:color.r,g,b }).toHexString(),
+                curColor: tinycolor({ r:r,g:g,b:b }).toHsv(),
             });
         }
-        else if (color.g || color.g===0) {
+
+        else if (color.h || color.s ||color.v)  {
+            var { h,s,v } = tinycolor(this.state.curColor).toHsv();
+            console.log("HSV",{ h,s,v });
+            if (color.h || color.h===0) {
+                h = color.h
+            }
+            if (color.s || color.s===0) {
+                s = color.s
+            }
+            if (color.v || color.v===0) {
+                v = color.v
+            }
             this.setState({
-                curColor: tinycolor({ r,g:color.g,b }).toHexString(),
-            });
-        }
-        else if (color.b || color.b===0) {
-            this.setState({
-                curColor: tinycolor({ r,g,b:color.b }).toHexString(),
+                curColor: tinycolor({ h:h,s:s,v:v }).toHsv(),
             });
         }
         else if (color.hex) {
             if (tinycolor(color.hex).isValid()) {
                 this.setState({
-                    curColor: tinycolor(color.hex).toHexString(),
+                    curColor: tinycolor(color.hex).toHsv(),
                 });
             }
-        }
-        else if (color.h || color.s ||color.v)  {
-            this.setState({
-                curColor: tinycolor(color).toHexString(),
-            });
         }
     }
 
@@ -81,8 +93,12 @@ class ColorPicker extends Component {
             <div style={{ 'background':'lightgray' }}>
                 <h1>Color Picker</h1>
                 <div style={{display:'flex', alignItems:'center'}} >
-                    <SaturationSpectrum value={ toHSV(this.state.curColor) } onChange={ this.handleChange } />
-                    <HueSpectrum value={ toHSV(this.state.curColor) } onChange={ this.handleChange } />
+                    <div>
+                        <SaturationSpectrum value={ toHSV(this.state.curColor) } onChange={ this.handleChange } />
+                    </div>
+                    <div>
+                        <HueSpectrum value={ toHSV(this.state.curColor) } onChange={ this.handleChange } />
+                    </div>
                     {/*<div style={{paddingLeft: '10px'}}>*/}
                     {/*    <div style={{padding: '5px', borderColor: this.state.curColor, borderWidth: '3px', borderStyle: 'solid' }}>*/}
                     {/*        <div>Hex value: { this.state.curColor }</div>*/}
@@ -97,7 +113,7 @@ class ColorPicker extends Component {
                         <div style={{padding: '5px', borderColor: this.state.curColor, borderWidth: '3px', borderStyle: 'solid' }}>
                             <ColorEditor
                                 colorFormat="hex"
-                                value={ this.state.curColor }
+                                value={ tinycolor(this.state.curColor).toHexString() }
                                 onChange={ this.handleChange }
                                 style={{ input: styles.input, label: styles.label }}
                             />
@@ -123,10 +139,10 @@ class ColorPicker extends Component {
                     </div>
 
                 </div>
-                <div className="colorSwatches" style={{background: this.state.curColor, width:'300px'}}>
-                    { this.state.curColor }
+                <div className="colorSwatches" style={{ background: tinycolor(this.state.curColor).toHexString(), width:'300px' }}>
+                    { tinycolor(this.state.curColor).toHexString().toUpperCase() }
                 </div>
-                <RelatedColors color={this.state.curColor} />
+                <RelatedColors color={ this.state.curColor } />
             </div>
         );
     }

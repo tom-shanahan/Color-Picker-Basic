@@ -1,5 +1,6 @@
 import { toFullColor, toStringValue } from "./ColorUtilities";
+import tinycolor from "tinycolor2";
 
-const defaultColor = toStringValue(toFullColor('red'));
+const defaultColor = tinycolor('red').toHsv();
 
 export default defaultColor;
