@@ -5,8 +5,8 @@ function fromRatio(color) {
 }
 
 function toFullColor(color) {
-  const { h } = tinycolor(color).toHsl();
-  return tinycolor({ h, s: 100, l: 50, a: 1, });
+  var { h } = tinycolor(color).toHsv();
+  return tinycolor({ h:h, s: 100, v: 100 });
 }
 
 function toHSV(value) {

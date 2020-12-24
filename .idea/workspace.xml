@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="565119eb-3e70-4fb2-b761-dac9a980bcb8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CSS/title.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ColorEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ColorUtilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorUtilities.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/DefaultColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/DefaultColor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/HueSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HueSpectrum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/RelatedColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RelatedColors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/SaturationSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SaturationSpectrum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -40,6 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -96,7 +104,8 @@
       <workItem from="1608421957423" duration="598000" />
       <workItem from="1608514195547" duration="4720000" />
       <workItem from="1608570360803" duration="27391000" />
-      <workItem from="1608656794319" duration="6030000" />
+      <workItem from="1608656794319" duration="6292000" />
+      <workItem from="1608751695303" duration="18705000" />
     </task>
     <task id="LOCAL-00001" summary="adding color swatches">
       <created>1608174478659</created>
@@ -119,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608606317217</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixing bugs, stable draft">
+      <created>1608690512450</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608690512451</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +145,8 @@
     <MESSAGE value="adding color swatches" />
     <MESSAGE value="added hex input" />
     <MESSAGE value="added rgb input" />
-    <option name="LAST_COMMIT_MESSAGE" value="added rgb input" />
+    <MESSAGE value="fixing bugs, stable draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing bugs, stable draft" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -137,6 +154,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Components/HueSpectrum.js</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/RelatedColors.js</url>
+          <line>8</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

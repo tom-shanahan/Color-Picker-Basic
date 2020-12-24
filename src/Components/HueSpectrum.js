@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import tinycolor from "tinycolor2";
-import { toHSV } from './ColorUtilities';
 
 class HueSpectrum extends Component {
     constructor(props) {
@@ -48,7 +47,6 @@ class HueSpectrum extends Component {
     }
 
     handleChange(event) {
-        console.log("HUE TRIGGERED")
         const yPos = this.handleMouseMove(event);
         this.updateHue(yPos);
         this.props.onChange(this.hsv)

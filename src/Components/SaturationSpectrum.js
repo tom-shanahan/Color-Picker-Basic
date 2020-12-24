@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { toHSV, fromRatio } from './ColorUtilities';
 import throttle from 'lodash/throttle'
 import tinycolor from "tinycolor2";
 // import * as _ from underscore;
@@ -60,7 +59,6 @@ class SaturationSpectrum extends Component {
     this.handleMouseMove(event)
     this.updateColor()
     this.hsv.h = null;
-    console.log("Sat change",this.hsv)
     this.props.onChange(this.hsv)
   }
 

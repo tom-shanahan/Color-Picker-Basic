@@ -69,16 +69,12 @@ class ColorEditor extends Component {
     }
 
     render() {
-        const styles = reactCSS({
-            'default': {
-                wrap: {
-                    position: 'relative',
-                },
-            },
-        }, this.props.style)
 
         return (
-            <div style={ styles.wrap }>
+            <div className='color-editor'>
+                <label>
+                    { this.props.colorFormat }
+                </label>
                 <input
                     ref={ input => this.input = input }
                     value={ this.state.value }
@@ -86,12 +82,6 @@ class ColorEditor extends Component {
                     onChange={ this.handleChange }
                     onBlur={ this.handleBlur }
                 />
-                <label
-                    style={ styles.label }
-                    onMouseDown={ this.handleMouseDown }
-                >
-                    { this.props.colorFormat }
-                </label>
             </div>
         )
     }

@@ -12,7 +12,7 @@ class RelatedColors extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            displayType: null,
+            displayType: "",
         }
         this.changeDisplay = this.changeDisplay.bind(this);
     }
@@ -86,24 +86,23 @@ class RelatedColors extends Component {
                 break;
             case 'Tetradic Colors:':
                 color0 = current;
-                color1 = tetradArray[0].toHexString().toUpperCase();
                 color2 = tetradArray[1].toHexString().toUpperCase();
                 color3 = tetradArray[2].toHexString().toUpperCase();
-                color4 = null;
+                color4 = tetradArray[3].toHexString().toUpperCase();
                 break;
         }
 
         return (
             <div>
                 <div>
-                    <FormControl>
-                        <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-                            Color Type
+                    <FormControl style={{ width: '250px'}}>
+                        <InputLabel shrink >
+                            Color Scheme Type:
                         </InputLabel>
                         <Select
-                            labelId="demo-simple-select-placeholder-label-label"
-                            id="demo-simple-select-placeholder-label"
-                            value= ""
+                            // labelId="demo-simple-select-placeholder-label-label"
+                            // id="demo-simple-select-placeholder-label"
+                            value={ this.state.displayType }
                             onClick={ this.changeDisplay }
                             displayEmpty
                             // className={classes.selectEmpty}
@@ -115,12 +114,12 @@ class RelatedColors extends Component {
                             <MenuItem value={ 'Triadic Colors:' }>Triadic Colors</MenuItem>
                             <MenuItem value={ 'Tetradic Colors:' }>Tetradic Colors</MenuItem>
                         </Select>
-                        <FormHelperText>Select a Color Scheme</FormHelperText>
+                        {/*<FormHelperText>Select a Color Scheme</FormHelperText>*/}
                     </FormControl>
                 </div>
 
                 <div>
-                    <h4>{ displayType }</h4>
+                    {/*<h4>{ displayType }</h4>*/}
                     {(color0 !== null) &&
                     <div className="colorSwatches" style={{ background: color0 }}>
                         {color0}
