@@ -11,6 +11,7 @@ import reactCSS from 'reactcss';
 import { toFullColor } from './Components/ColorUtilities'
 import { clone } from 'lodash';
 import {blue} from "@material-ui/core/colors";
+import Grid from '@material-ui/core/Grid';
 
 
 class ColorPicker extends Component {
@@ -85,86 +86,170 @@ class ColorPicker extends Component {
         const tetrad3 = clone(baseColor).tetrad()[3].toHexString().toUpperCase();
 
 
-        const styles = {
-            fields: {
-                display: 'flex',
-                paddingTop: '4px',
+        const colorLabel = {
+            // display: 'block',
+            textAlign: 'center',
+            // fontSize: '11px',
+            color: '#222',
+            paddingTop: '3px',
+            paddingBottom: '4px',
+            package: '4px',
+            textTransform: 'capitalize',
+        };
+        const colorInput = {
+            // width: '80%',
+            // padding: '4px 10% 3px',
+            border: 'none',
+            boxShadow: 'inset 0 0 0 1px #ccc',
+            // fontSize: '11px',
+            width:'60px',
+            marginRight: '8px',
+            marginLeft: '4px',
+            fontFamily: 'Roboto',
+            fontWeight: 700,
+            fontSize: 'x-large',
+        };
+
+        const redInput = {
+            colorInput:{
+                ...colorInput,
+                color:'red',
             },
-            input: {
-                width: '80%',
-                padding: '4px 10% 3px',
-                border: 'none',
-                boxShadow: 'inset 0 0 0 1px #ccc',
-                fontSize: '11px',
+            colorLabel:{
+                ...colorLabel,
+                color:'red',
+                textTransform: 'upperCase',
+            }
+        }
+        const GreenInput = {
+            colorInput:{
+                ...colorInput,
+                color:'green',
             },
-            label: {
-                display: 'block',
-                textAlign: 'center',
-                fontSize: '11px',
-                color: '#222',
-                paddingTop: '3px',
-                paddingBottom: '4px',
-                textTransform: 'capitalize',
+            colorLabel:{
+                ...colorLabel,
+                color:'green',
+                textTransform: 'upperCase',
+            }
+        }
+        const BlueInput = {
+            colorInput:{
+                ...colorInput,
+                color:'blue',
+                textTransform: 'upperCase',
             },
+            colorLabel:{
+                ...colorLabel,
+                color:'blue',
+                textTransform: 'upperCase',
+            }
+        }
+        const hexInput = {
+            colorInput:{
+                ...colorInput,
+                color:'black',
+                textTransform: 'upperCase',
+                width:'120px',
+            },
+            colorLabel:{
+                ...colorLabel,
+                color:'black',
+                textTransform: 'upperCase',
+            }
         }
 
         return (
             <div style={{ 'background':mono }}>
-                <h1 className="vectro">
-                    <span className="vectro-body" style={{ '--color':complement }}>
-                        Color Picker
-                    </span>
-                    <span className="vectro-bar bar-one" style={{ '--color':tetrad1 }}>I</span>
-                    <span className="vectro-bar bar-two" style={{ '--color':tetrad2 }}>I</span>
-                    <span className="vectro-bar bar-three" style={{ '--color':tetrad3 }}>I</span>
-                </h1>
-                <div className='container'>
-                    <div style={{ display:'flex', alignItems:'center', marginLeft:'flex'}} >
-                        <div>
-                            <SaturationSpectrum value={ tinycolor(this.state.curColor).toHsv() } onChange={ this.handleChange } />
+                <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                        <div className='container' style={{paddingTop:'15px', marginTop:'15px'}}>
+                            <h1 className="vectro" style={{ background:"black", paddingLeft:'5px', paddingRight:'20px'
+                                , borderRadius: "10px"  }}>
+                                <span className="vectro-bar" style={{ '--color':tetrad1 }}>I</span>
+                                <span className="vectro-bar" style={{ '--color':tetrad2 }}>I</span>
+                                <span className="vectro-bar" style={{ '--color':tetrad3, paddingRight:'20px' }}>I</span>
+                                <span className="vectro-body" style={{ '--color':complement }}>
+                                    Coloration
+                                </span>
+                                <span className="vectro-bar" style={{ '--color':tetrad1 }}>I</span>
+                                <span className="vectro-bar" style={{ '--color':tetrad2 }}>I</span>
+                                <span className="vectro-bar" style={{ '--color':tetrad3 }}>I</span>
+                            </h1>
                         </div>
-                        <div>
-                            <HueSpectrum value={ tinycolor(this.state.curColor).toHsv() } onChange={ this.handleChange } />
+                    </Grid>
+                    <Grid item={12}>
+                        <div className='container'>
+                            <RelatedColors color={ this.state.curColor } />
                         </div>
-                        <div style={ styles.fields }>
-                            {/*<div style={{padding: '5px', borderColor: this.state.curColor, borderWidth: '3px', borderStyle: 'solid' }}>*/}
-                            <div>
-                                <ColorEditor
-                                    colorFormat="hex"
-                                    value={ tinycolor(this.state.curColor).toHexString() }
-                                    onChange={ this.handleChange }
-                                    style={{ input: styles.input, label: styles.label }}
-                                />
-                                <div>
-                                    <ColorEditor
-                                        colorFormat="r"
-                                        value={ tinycolor(this.state.curColor).toRgb().r }
-                                        onChange={ this.handleChange }
-                                        style={{ input: styles.input, label: styles.label }}
-                                    />
-                                    <ColorEditor
-                                        colorFormat="g"
-                                        value={ tinycolor(this.state.curColor).toRgb().g }
-                                        onChange={ this.handleChange }
-                                        style={{ input: styles.input, label: styles.label }}
-                                    />
-                                    <ColorEditor
-                                        colorFormat="b"
-                                        value={ tinycolor(this.state.curColor).toRgb().b }
-                                        onChange={ this.handleChange }
-                                        style={{ input: styles.input, label: styles.label }}
-                                    />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <div className='container'>
+                            <div style={{ display:'flex', marginLeft:'flex'}} >
+                                <div style={{ width:'300px' }}>
+                                    <SaturationSpectrum value={ tinycolor(this.state.curColor).toHsv() } onChange={ this.handleChange } />
+                                    <div className="colorSwatches" style={{ background: tinycolor(this.state.curColor).toHexString(), width:'300px' }}>
+                                        { tinycolor(this.state.curColor).toHexString().toUpperCase() }
+                                    </div>
+                                </div>
+                                <div style={{ }}>
+                                    <HueSpectrum value={ tinycolor(this.state.curColor).toHsv() } onChange={ this.handleChange } />
+                                </div>
+                                <div style={{ display:'flex', padding:'5px', marginTop:'auto', marginBottom:'auto', paddingBottom:'20px' }}>
+                                    <div>
+                                        <div style={{padding: '5px'}}>
+                                            <ColorEditor
+                                                colorFormat="hex"
+                                                value={ tinycolor(this.state.curColor).toHexString() }
+                                                onChange={ this.handleChange }
+                                                style={{ colorInput: hexInput.colorInput, colorLabel: hexInput.colorLabel }}
+                                            />
+                                        </div>
+                                        <div style={{padding: '5px'}}>
+                                            <ColorEditor
+                                                colorFormat="r"
+                                                value={ tinycolor(this.state.curColor).toRgb().r }
+                                                onChange={ this.handleChange }
+                                                style={{ colorInput: redInput.colorInput, colorLabel: redInput.colorLabel }}
+                                            />
+                                            <ColorEditor
+                                                colorFormat="g"
+                                                value={ tinycolor(this.state.curColor).toRgb().g }
+                                                onChange={ this.handleChange }
+                                                style={{ colorInput: GreenInput.colorInput, colorLabel: GreenInput.colorLabel }}
+                                            />
+                                            <ColorEditor
+                                                colorFormat="b"
+                                                value={ tinycolor(this.state.curColor).toRgb().b }
+                                                onChange={ this.handleChange }
+                                                style={{ colorInput: BlueInput.colorInput, colorLabel: BlueInput.colorLabel }}
+                                            />
+                                        </div>
+                                        <div style={{padding: '5px'}}>
+                                            <ColorEditor
+                                                colorFormat="h"
+                                                value={ tinycolor(this.state.curColor).toHsv().h }
+                                                onChange={ this.handleChange }
+                                                style={{ colorInput: redInput.colorInput, colorLabel: redInput.colorLabel }}
+                                            />
+                                            <ColorEditor
+                                                colorFormat="s"
+                                                value={ tinycolor(this.state.curColor).toHsv().s }
+                                                onChange={ this.handleChange }
+                                                style={{ colorInput: GreenInput.colorInput, colorLabel: GreenInput.colorLabel }}
+                                            />
+                                            <ColorEditor
+                                                colorFormat="v"
+                                                value={ tinycolor(this.state.curColor).toHsv().v }
+                                                onChange={ this.handleChange }
+                                                style={{ colorInput: BlueInput.colorInput, colorLabel: BlueInput.colorLabel }}
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className='container'>
-                    <div className="colorSwatches" style={{ background: tinycolor(this.state.curColor).toHexString(), width:'300px' }}>
-                        { tinycolor(this.state.curColor).toHexString().toUpperCase() }
-                    </div>
-                    <RelatedColors color={ this.state.curColor } />
-                </div>
+                    </Grid>
+                </Grid>
             </div>
         );
     }

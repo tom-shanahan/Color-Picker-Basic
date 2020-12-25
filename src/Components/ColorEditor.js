@@ -72,10 +72,11 @@ class ColorEditor extends Component {
 
         return (
             <div className='color-editor'>
-                <label>
-                    { this.props.colorFormat }
+                <label style={ this.props.style.colorLabel  }>
+                    { this.props.colorFormat }:
                 </label>
                 <input
+                    style={ this.props.style.colorInput }
                     ref={ input => this.input = input }
                     value={ this.state.value }
                     onKeyDown={ this.handleKeyDown }

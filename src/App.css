@@ -41,18 +41,29 @@
 
 
 .colorSwatches {
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 60px;
   color: white;
   display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: large;
+}
+
+.scheme-selector {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: large;
 }
 
 .color-editor {
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: x-large;
   width: 25px;
   border-color: red;
   border-width: 2px;
+  display: inline;
 }
 
 .container {

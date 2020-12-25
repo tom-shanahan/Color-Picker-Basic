@@ -96,7 +96,7 @@ class RelatedColors extends Component {
             <div>
                 <div>
                     <FormControl style={{ width: '250px'}}>
-                        <InputLabel shrink >
+                        <InputLabel shrink className='scheme-selector'>
                             Color Scheme Type:
                         </InputLabel>
                         <Select
@@ -106,6 +106,7 @@ class RelatedColors extends Component {
                             onClick={ this.changeDisplay }
                             displayEmpty
                             // className={classes.selectEmpty}
+
                         >
                             <MenuItem value="" disabled><em>Choose a Color Scheme!</em></MenuItem>
                             <MenuItem value={ 'Complementary Colors:' }>Complementary Colors</MenuItem>
