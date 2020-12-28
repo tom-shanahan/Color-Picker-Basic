@@ -56,8 +56,11 @@
       <recent name="C:\Users\tshan\WebstormProjects\color-picker-basic\src\Components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63364/color-picker-basic/build/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -70,6 +73,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -97,7 +105,7 @@
       <workItem from="1608656794319" duration="6292000" />
       <workItem from="1608751695303" duration="18788000" />
       <workItem from="1608831661639" duration="14103000" />
-      <workItem from="1609175150941" duration="8835000" />
+      <workItem from="1609175150941" duration="10723000" />
     </task>
     <task id="LOCAL-00001" summary="adding color swatches">
       <created>1608174478659</created>
@@ -148,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609184932804</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="gh-pages deploy">
+      <created>1609187381841</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609187381841</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +177,8 @@
     <MESSAGE value="formatting work" />
     <MESSAGE value="more formatting work" />
     <MESSAGE value="version 1.0 to publish" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.0 to publish" />
+    <MESSAGE value="gh-pages deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="gh-pages deploy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
