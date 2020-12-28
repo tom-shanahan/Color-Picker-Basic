@@ -29,8 +29,8 @@ class HueSpectrum extends Component {
         onChange: null,
         value: null,
         height: 300,
-        width: 30,
-        pointerSize: [4,28],
+        width: 60,
+        pointerSize: [4,58],
     }
 
     componentWillUnmount() {

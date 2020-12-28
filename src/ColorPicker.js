@@ -3,16 +3,13 @@ import HueSpectrum from './Components/HueSpectrum';
 import SaturationSpectrum from './Components/SaturationSpectrum';
 import DEFAULT_COLOR from "./Components/DefaultColor";
 import tinycolor from "tinycolor2";
-import "./App.css";
-import './CSS/title.css'
 import RelatedColors from './Components/RelatedColors';
 import ColorEditor from "./Components/ColorEditor";
-import reactCSS from 'reactcss';
 import { toFullColor } from './Components/ColorUtilities'
 import { clone } from 'lodash';
-import {blue} from "@material-ui/core/colors";
 import Grid from '@material-ui/core/Grid';
-
+import "./App.css";
+import './CSS/title.css'
 
 class ColorPicker extends Component {
     constructor(props) {
@@ -73,10 +70,6 @@ class ColorPicker extends Component {
         let triadArray = tinycolor(this.props.color).triad();
         let tetradArray = tinycolor(this.props.color).tetrad();
 
-        // color2 = tetradArray[1].toHexString().toUpperCase();
-        // color3 = tetradArray[2].toHexString().toUpperCase();
-        // color4 = tetradArray[3].toHexString().toUpperCase();
-
         const mono = clone(baseColor).lighten(40).desaturate(40).toHexString().toUpperCase();
         const triad1 = clone(baseColor).triad()[1].toHexString().toUpperCase();
         const triad2 = clone(baseColor).triad()[2].toHexString().toUpperCase();
@@ -85,11 +78,8 @@ class ColorPicker extends Component {
         const tetrad2 = clone(baseColor).tetrad()[2].toHexString().toUpperCase();
         const tetrad3 = clone(baseColor).tetrad()[3].toHexString().toUpperCase();
 
-
         const colorLabel = {
-            // display: 'block',
             textAlign: 'center',
-            // fontSize: '11px',
             color: '#222',
             paddingTop: '3px',
             paddingBottom: '4px',
@@ -97,12 +87,9 @@ class ColorPicker extends Component {
             textTransform: 'capitalize',
         };
         const colorInput = {
-            // width: '80%',
-            // padding: '4px 10% 3px',
             border: 'none',
             boxShadow: 'inset 0 0 0 1px #ccc',
-            // fontSize: '11px',
-            width:'60px',
+            width:'65px',
             marginRight: '8px',
             marginLeft: '4px',
             fontFamily: 'Roboto',
@@ -157,29 +144,37 @@ class ColorPicker extends Component {
                 textTransform: 'upperCase',
             }
         }
+        const HSVInput = {
+            colorInput:{
+                ...colorInput,
+                textTransform: 'upperCase',
+            },
+            colorLabel:{
+                ...colorLabel,
+                textTransform: 'upperCase',
+            }
+        }
+
+        const shadowX = ((tinycolor(this.state.curColor).toHsv().s - .5)*20).toString()+'px';
+        const shadowY = ((tinycolor(this.state.curColor).toHsv().v - .5)*20).toString()+'px';
 
         return (
             <div style={{ 'background':mono }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
-                        <div className='container' style={{paddingTop:'15px', marginTop:'15px'}}>
+                        <div className='container' style={{paddingTop:'5px', marginTop:'5px'}}>
                             <h1 className="vectro" style={{ background:"black", paddingLeft:'5px', paddingRight:'20px'
                                 , borderRadius: "10px"  }}>
-                                <span className="vectro-bar" style={{ '--color':tetrad1 }}>I</span>
-                                <span className="vectro-bar" style={{ '--color':tetrad2 }}>I</span>
-                                <span className="vectro-bar" style={{ '--color':tetrad3, paddingRight:'20px' }}>I</span>
-                                <span className="vectro-body" style={{ '--color':complement }}>
+                                <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY, '--color':tetrad1 }}>I</span>
+                                <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY,'--color':tetrad2 }}>I</span>
+                                <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY,'--color':tetrad3, paddingRight:'20px' }}>I</span>
+                                <span className="vectro-body" style={{ '--xPos':shadowX, '--yPos':shadowY,'--color':complement }}>
                                     Coloration
                                 </span>
-                                <span className="vectro-bar" style={{ '--color':tetrad1 }}>I</span>
-                                <span className="vectro-bar" style={{ '--color':tetrad2 }}>I</span>
-                                <span className="vectro-bar" style={{ '--color':tetrad3 }}>I</span>
+                                <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY,'--color':tetrad1 }}>I</span>
+                                <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY,'--color':tetrad2 }}>I</span>
+                                <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY,'--color':tetrad3 }}>I</span>
                             </h1>
-                        </div>
-                    </Grid>
-                    <Grid item={12}>
-                        <div className='container'>
-                            <RelatedColors color={ this.state.curColor } />
                         </div>
                     </Grid>
                     <Grid item xs={12}>
@@ -227,25 +222,32 @@ class ColorPicker extends Component {
                                         <div style={{padding: '5px'}}>
                                             <ColorEditor
                                                 colorFormat="h"
-                                                value={ tinycolor(this.state.curColor).toHsv().h }
+                                                value={ Math.round(tinycolor(this.state.curColor).toHsv().h) }
                                                 onChange={ this.handleChange }
-                                                style={{ colorInput: redInput.colorInput, colorLabel: redInput.colorLabel }}
+                                                style={{ colorInput: HSVInput.colorInput, colorLabel: HSVInput.colorLabel }}
                                             />
                                             <ColorEditor
                                                 colorFormat="s"
-                                                value={ tinycolor(this.state.curColor).toHsv().s }
+                                                value={ Math.round(tinycolor(this.state.curColor).toHsv().s*100)+"%" }
                                                 onChange={ this.handleChange }
-                                                style={{ colorInput: GreenInput.colorInput, colorLabel: GreenInput.colorLabel }}
+                                                style={{ colorInput: HSVInput.colorInput, colorLabel: HSVInput.colorLabel }}
                                             />
                                             <ColorEditor
                                                 colorFormat="v"
-                                                value={ tinycolor(this.state.curColor).toHsv().v }
+                                                value={ Math.round(tinycolor(this.state.curColor).toHsv().v*100)+"%" }
                                                 onChange={ this.handleChange }
-                                                style={{ colorInput: BlueInput.colorInput, colorLabel: BlueInput.colorLabel }}
+                                                style={{ colorInput: HSVInput.colorInput, colorLabel: HSVInput.colorLabel }}
                                             />
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <div className='container'>
+                            <div style={{ display:'flex', margin:'auto', width:'750px'}}>
+                                <RelatedColors color={ this.state.curColor } />
                             </div>
                         </div>
                     </Grid>

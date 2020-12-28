@@ -7,7 +7,7 @@
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CSS/title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/title.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ColorEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HueSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HueSpectrum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/RelatedColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RelatedColors.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +100,8 @@
       <workItem from="1608570360803" duration="27391000" />
       <workItem from="1608656794319" duration="6292000" />
       <workItem from="1608751695303" duration="18788000" />
-      <workItem from="1608831661639" duration="13895000" />
+      <workItem from="1608831661639" duration="14103000" />
+      <workItem from="1609175150941" duration="6401000" />
     </task>
     <task id="LOCAL-00001" summary="adding color swatches">
       <created>1608174478659</created>
@@ -137,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608774410104</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="more formatting work">
+      <created>1608860849874</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608860849874</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +157,8 @@
     <MESSAGE value="added rgb input" />
     <MESSAGE value="fixing bugs, stable draft" />
     <MESSAGE value="formatting work" />
-    <option name="LAST_COMMIT_MESSAGE" value="formatting work" />
+    <MESSAGE value="more formatting work" />
+    <option name="LAST_COMMIT_MESSAGE" value="more formatting work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

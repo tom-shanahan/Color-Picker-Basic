@@ -7,6 +7,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import PropTypes from "prop-types";
+import {Typography} from "@material-ui/core";
 
 class RelatedColors extends Component {
     constructor(props) {
@@ -95,10 +96,11 @@ class RelatedColors extends Component {
         return (
             <div>
                 <div>
-                    <FormControl style={{ width: '250px'}}>
+                    <FormControl style={{ width: '400px'}}>
                         <InputLabel shrink className='scheme-selector'>
-                            Color Scheme Type:
+                            <div className='scheme-selector' style={{fontSize:'25px'}}>Color Scheme Type:</div>
                         </InputLabel>
+                        <div style={{marginBottom:'30px'}}/>
                         <Select
                             // labelId="demo-simple-select-placeholder-label-label"
                             // id="demo-simple-select-placeholder-label"
@@ -108,12 +110,12 @@ class RelatedColors extends Component {
                             // className={classes.selectEmpty}
 
                         >
-                            <MenuItem value="" disabled><em>Choose a Color Scheme!</em></MenuItem>
-                            <MenuItem value={ 'Complementary Colors:' }>Complementary Colors</MenuItem>
-                            <MenuItem value={ 'Monochromatic Colors:' }>Monochromatic Colors</MenuItem>
-                            <MenuItem value={ 'Analogous Colors:' }>Analogous Colors</MenuItem>
-                            <MenuItem value={ 'Triadic Colors:' }>Triadic Colors</MenuItem>
-                            <MenuItem value={ 'Tetradic Colors:' }>Tetradic Colors</MenuItem>
+                            <MenuItem value="" disabled><em className='scheme-selector'>Choose a Color Scheme!</em></MenuItem>
+                            <MenuItem value={ 'Complementary Colors:' }><div className='scheme-selector'>Complementary Colors</div></MenuItem>
+                            <MenuItem value={ 'Monochromatic Colors:' }><div className='scheme-selector'>Monochromatic Colors</div></MenuItem>
+                            <MenuItem value={ 'Analogous Colors:' }><div className='scheme-selector'>Analogous Colors</div></MenuItem>
+                            <MenuItem value={ 'Triadic Colors:' }><div className='scheme-selector'>Triadic Colors</div></MenuItem>
+                            <MenuItem value={ 'Tetradic Colors:' }><div className='scheme-selector'>Tetradic Colors</div></MenuItem>
                         </Select>
                         {/*<FormHelperText>Select a Color Scheme</FormHelperText>*/}
                     </FormControl>
