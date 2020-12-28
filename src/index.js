@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './CSS/spectrum.css';
 import reportWebVitals from './reportWebVitals';
 import ColorPicker from "./ColorPicker";
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
