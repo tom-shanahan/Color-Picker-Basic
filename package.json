@@ -1,6 +1,6 @@
 {
-  "homepage": "http://tom-shanahan.github.io/color-picker-basic",
-  "name": "color-picker-basic",
+  "homepage": "http://tom-shanahan.github.io/Color-Picker-Basic",
+  "name": "Color-Picker-Basic",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
