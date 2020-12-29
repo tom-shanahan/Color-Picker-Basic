@@ -80,14 +80,13 @@ class ColorPicker extends Component {
 
         const colorLabel = {
             textAlign: 'center',
-            color: '#222',
+            color: 'whitesmoke',
             paddingTop: '3px',
             paddingBottom: '4px',
             package: '4px',
             textTransform: 'capitalize',
         };
         const colorInput = {
-            border: 'none',
             boxShadow: 'inset 0 0 0 1px #ccc',
             width:'65px',
             marginRight: '8px',
@@ -134,13 +133,11 @@ class ColorPicker extends Component {
         const hexInput = {
             colorInput:{
                 ...colorInput,
-                color:'black',
                 textTransform: 'upperCase',
                 width:'120px',
             },
             colorLabel:{
                 ...colorLabel,
-                color:'black',
                 textTransform: 'upperCase',
             }
         }
@@ -155,17 +152,16 @@ class ColorPicker extends Component {
             }
         }
 
-        const shadowX = ((tinycolor(this.state.curColor).toHsv().s - .5)*20).toString()+'px';
-        const shadowY = ((tinycolor(this.state.curColor).toHsv().v - .5)*20).toString()+'px';
+        const shadowX = ((tinycolor(this.state.curColor).toHsv().s - .5)*100).toString()+'px';
+        const shadowY = ((tinycolor(this.state.curColor).toHsv().v - .5)*100).toString()+'px';
 
         return (
             <html>
-                <body style={{ 'background':mono }}>
-                    <Grid container>
+                <body style={{ 'background':'slategrey' }}>
+                    <Grid container >
                         <Grid item xs={12} className='grid-element'>
-                            <div className='container' style={{paddingTop:'5px', marginTop:'5px'}}>
-                                <h1 className="vectro" style={{ background:"black", paddingLeft:'5px', paddingRight:'20px'
-                                    , borderRadius: "10px"  }}>
+                            <div className='container' style={{ paddingTop:'5px', marginTop:'5px' }}>
+                                <h1 className="vectro" >
                                     <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY, '--color':tetrad1 }}>I</span>
                                     <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY,'--color':tetrad2 }}>I</span>
                                     <span className="vectro-bar" style={{ '--xPos':shadowX, '--yPos':shadowY,'--color':tetrad3, paddingRight:'20px' }}>I</span>
@@ -247,7 +243,7 @@ class ColorPicker extends Component {
                         </Grid>
                         <Grid item xs={12} className='grid-element'>
                             <div className='container'>
-                                <div style={{ display:'flex', margin:'auto', width:'750px'}}>
+                                <div style={{ display:'flex', margin:'auto', width:'750px' }}>
                                     <RelatedColors color={ this.state.curColor } />
                                 </div>
                             </div>

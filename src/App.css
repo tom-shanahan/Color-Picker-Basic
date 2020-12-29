@@ -11,9 +11,10 @@
 }
 
 .scheme-selector {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    font-palette: light;
 }
 
 .color-editor {
@@ -57,3 +58,19 @@ html, body {
   padding-top:12px;
   padding-bottom:12px;
 }
+
+
+
+.sign {
+    text-shadow:
+        0 0 10px var(--color1),
+        0 0 20px var(--color2),
+        0 0 40px var(--color3),
+        0 0 80px var(--color4);
+    color: azure;
+    --color1: azure;
+    --color2: aqua;
+    --color3: dodgerblue;
+    --color4: blue;
+}
+

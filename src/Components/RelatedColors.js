@@ -3,11 +3,21 @@ import tinycolor from "tinycolor2";
 import "../App.css"
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import PropTypes from "prop-types";
-import {Typography} from "@material-ui/core";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#010101',
+        },
+        secondary: {
+            main: '#010101',
+        },
+    },
+});
 
 class RelatedColors extends Component {
     constructor(props) {
@@ -94,6 +104,7 @@ class RelatedColors extends Component {
         }
 
         return (
+            <ThemeProvider theme={theme}>
             <div>
                 <div>
                     <FormControl style={{ width: '400px'}}>
@@ -108,7 +119,6 @@ class RelatedColors extends Component {
                             onClick={ this.changeDisplay }
                             displayEmpty
                             // className={classes.selectEmpty}
-
                         >
                             <MenuItem value="" disabled><em className='scheme-selector'>Choose a Color Scheme!</em></MenuItem>
                             <MenuItem value={ 'Complementary Colors:' }><div className='scheme-selector'>Complementary Colors</div></MenuItem>
@@ -150,6 +160,7 @@ class RelatedColors extends Component {
                     }
                 </div>
             </div>
+            </ThemeProvider>
         );
     }
 }
