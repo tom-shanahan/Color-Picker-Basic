@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="565119eb-3e70-4fb2-b761-dac9a980bcb8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/color-picker-basic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coloration.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +105,7 @@
       <workItem from="1608656794319" duration="6292000" />
       <workItem from="1608751695303" duration="18788000" />
       <workItem from="1608831661639" duration="14103000" />
-      <workItem from="1609175150941" duration="16528000" />
+      <workItem from="1609175150941" duration="17975000" />
     </task>
     <task id="LOCAL-00001" summary="adding color swatches">
       <created>1608174478659</created>
@@ -180,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609189866340</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="removing background padding">
+      <created>1609198921297</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609198921297</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +199,8 @@
     <MESSAGE value="more formatting work" />
     <MESSAGE value="version 1.0 to publish" />
     <MESSAGE value="gh-pages deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="gh-pages deploy" />
+    <MESSAGE value="removing background padding" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing background padding" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
