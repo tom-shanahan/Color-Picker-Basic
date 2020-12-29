@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Color-Picker-Basic/static/css/main.b46fa518.chunk.css",
-    "main.js": "/Color-Picker-Basic/static/js/main.b8456015.chunk.js",
-    "main.js.map": "/Color-Picker-Basic/static/js/main.b8456015.chunk.js.map",
-    "runtime-main.js": "/Color-Picker-Basic/static/js/runtime-main.e8d33be3.js",
-    "runtime-main.js.map": "/Color-Picker-Basic/static/js/runtime-main.e8d33be3.js.map",
-    "static/js/2.fc191f4c.chunk.js": "/Color-Picker-Basic/static/js/2.fc191f4c.chunk.js",
-    "static/js/2.fc191f4c.chunk.js.map": "/Color-Picker-Basic/static/js/2.fc191f4c.chunk.js.map",
-    "static/js/3.9feb4910.chunk.js": "/Color-Picker-Basic/static/js/3.9feb4910.chunk.js",
-    "static/js/3.9feb4910.chunk.js.map": "/Color-Picker-Basic/static/js/3.9feb4910.chunk.js.map",
-    "index.html": "/Color-Picker-Basic/index.html",
-    "static/css/main.b46fa518.chunk.css.map": "/Color-Picker-Basic/static/css/main.b46fa518.chunk.css.map",
-    "static/js/2.fc191f4c.chunk.js.LICENSE.txt": "/Color-Picker-Basic/static/js/2.fc191f4c.chunk.js.LICENSE.txt"
+    "main.css": "/coloration/static/css/main.b46fa518.chunk.css",
+    "main.js": "/coloration/static/js/main.9c6b886c.chunk.js",
+    "main.js.map": "/coloration/static/js/main.9c6b886c.chunk.js.map",
+    "runtime-main.js": "/coloration/static/js/runtime-main.8e740c27.js",
+    "runtime-main.js.map": "/coloration/static/js/runtime-main.8e740c27.js.map",
+    "static/js/2.0a81577e.chunk.js": "/coloration/static/js/2.0a81577e.chunk.js",
+    "static/js/2.0a81577e.chunk.js.map": "/coloration/static/js/2.0a81577e.chunk.js.map",
+    "static/js/3.5cdb7004.chunk.js": "/coloration/static/js/3.5cdb7004.chunk.js",
+    "static/js/3.5cdb7004.chunk.js.map": "/coloration/static/js/3.5cdb7004.chunk.js.map",
+    "index.html": "/coloration/index.html",
+    "static/css/main.b46fa518.chunk.css.map": "/coloration/static/css/main.b46fa518.chunk.css.map",
+    "static/js/2.0a81577e.chunk.js.LICENSE.txt": "/coloration/static/js/2.0a81577e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e8d33be3.js",
-    "static/js/2.fc191f4c.chunk.js",
+    "static/js/runtime-main.8e740c27.js",
+    "static/js/2.0a81577e.chunk.js",
     "static/css/main.b46fa518.chunk.css",
-    "static/js/main.b8456015.chunk.js"
+    "static/js/main.9c6b886c.chunk.js"
   ]
 }
