@@ -4,10 +4,11 @@
     <list default="true" id="565119eb-3e70-4fb2-b761-dac9a980bcb8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CSS/title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/title.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ColorEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HueSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HueSpectrum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/RelatedColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RelatedColors.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chrome_change_background_color" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -111,7 +112,20 @@
       <workItem from="1608831661639" duration="14103000" />
       <workItem from="1609175150941" duration="20494000" />
       <workItem from="1609262843551" duration="8347000" />
-      <workItem from="1609273108475" duration="5561000" />
+      <workItem from="1609273108475" duration="7416000" />
+      <workItem from="1609354024123" duration="596000" />
+      <workItem from="1609785334022" duration="595000" />
+      <workItem from="1609870667627" duration="2382000" />
+      <workItem from="1609955297379" duration="890000" />
+      <workItem from="1610042339036" duration="595000" />
+      <workItem from="1610125648942" duration="594000" />
+      <workItem from="1610146862740" duration="595000" />
+      <workItem from="1610211357616" duration="583000" />
+      <workItem from="1610756509825" duration="594000" />
+      <workItem from="1611101529847" duration="589000" />
+      <workItem from="1612983852029" duration="99000" />
+      <workItem from="1612984091914" duration="6034000" />
+      <workItem from="1613066817816" duration="21399000" />
     </task>
     <task id="LOCAL-00001" summary="adding color swatches">
       <created>1608174478659</created>
@@ -204,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609201971906</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="some format updates">
+      <created>1609282051156</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609282051156</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +242,8 @@
     <MESSAGE value="gh-pages deploy" />
     <MESSAGE value="removing background padding" />
     <MESSAGE value="renaming" />
-    <option name="LAST_COMMIT_MESSAGE" value="renaming" />
+    <MESSAGE value="some format updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="some format updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

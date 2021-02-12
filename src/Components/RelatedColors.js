@@ -105,61 +105,59 @@ class RelatedColors extends Component {
 
         return (
             <ThemeProvider theme={theme}>
-            <div>
                 <div>
-                    <FormControl style={{ width: '400px'}}>
-                        <InputLabel shrink className='scheme-selector'>
-                            <div className='scheme-selector' style={{fontSize:'25px'}}>Color Scheme Type:</div>
-                        </InputLabel>
-                        <div style={{marginBottom:'30px'}}/>
-                        <Select
-                            // labelId="demo-simple-select-placeholder-label-label"
-                            // id="demo-simple-select-placeholder-label"
-                            value={ this.state.displayType }
-                            onClick={ this.changeDisplay }
-                            displayEmpty
-                            // className={classes.selectEmpty}
-                        >
-                            <MenuItem value="" disabled><em className='scheme-selector'>Choose a Color Scheme!</em></MenuItem>
-                            <MenuItem value={ 'Complementary Colors:' }><div className='scheme-selector'>Complementary Colors</div></MenuItem>
-                            <MenuItem value={ 'Monochromatic Colors:' }><div className='scheme-selector'>Monochromatic Colors</div></MenuItem>
-                            <MenuItem value={ 'Analogous Colors:' }><div className='scheme-selector'>Analogous Colors</div></MenuItem>
-                            <MenuItem value={ 'Triadic Colors:' }><div className='scheme-selector'>Triadic Colors</div></MenuItem>
-                            <MenuItem value={ 'Tetradic Colors:' }><div className='scheme-selector'>Tetradic Colors</div></MenuItem>
-                        </Select>
-                        {/*<FormHelperText>Select a Color Scheme</FormHelperText>*/}
-                    </FormControl>
-                </div>
+                    <div>
+                        <FormControl>
+                            <div className='scheme-selector'>Color Scheme Type:</div>
+                            {/*<div style={{marginBottom:'30px'}}/>*/}
+                            <Select
+                                // labelId="demo-simple-select-placeholder-label-label"
+                                // id="demo-simple-select-placeholder-label"
+                                value={ this.state.displayType }
+                                onClick={ this.changeDisplay }
+                                displayEmpty
+                                // className={classes.selectEmpty}
+                            >
+                                <MenuItem value="" disabled><em className='scheme-selector'>Choose a Color Scheme!</em></MenuItem>
+                                <MenuItem value={ 'Complementary Colors:' }><div className='scheme-selector'>Complementary Colors</div></MenuItem>
+                                <MenuItem value={ 'Monochromatic Colors:' }><div className='scheme-selector'>Monochromatic Colors</div></MenuItem>
+                                <MenuItem value={ 'Analogous Colors:' }><div className='scheme-selector'>Analogous Colors</div></MenuItem>
+                                <MenuItem value={ 'Triadic Colors:' }><div className='scheme-selector'>Triadic Colors</div></MenuItem>
+                                <MenuItem value={ 'Tetradic Colors:' }><div className='scheme-selector'>Tetradic Colors</div></MenuItem>
+                            </Select>
+                            {/*<FormHelperText>Select a Color Scheme</FormHelperText>*/}
+                        </FormControl>
+                    </div>
 
-                <div>
-                    {/*<h4>{ displayType }</h4>*/}
-                    {(color0 !== null) &&
-                    <div className="colorSwatches" style={{ background: color0 }}>
-                        {color0}
+                    <div style={{height: '8vh'}}>
+                        {/*<h4>{ displayType }</h4>*/}
+                        {(color0 !== null) &&
+                        <div className="colorSwatches" style={{ background: color0 }}>
+                            {color0}
+                            </div>
+                        }
+                        {(color1 !== null) &&
+                        <div className="colorSwatches" style={{ background: color1 }}>
+                            {color1}
                         </div>
-                    }
-                    {(color1 !== null) &&
-                    <div className="colorSwatches" style={{ background: color1 }}>
-                        {color1}
+                        }
+                        {(color2 !== null) &&
+                        <div className="colorSwatches" style={{ background: color2 }}>
+                            {color2}
+                        </div>
+                        }
+                        {(color3 !== null) &&
+                        <div className="colorSwatches" style={{ background: color3 }}>
+                            {color3}
+                        </div>
+                        }
+                        {(color4 !== null) &&
+                        <div className="colorSwatches" style={{ background: color4 }}>
+                            {color4}
+                        </div>
+                        }
                     </div>
-                    }
-                    {(color2 !== null) &&
-                    <div className="colorSwatches" style={{ background: color2 }}>
-                        {color2}
-                    </div>
-                    }
-                    {(color3 !== null) &&
-                    <div className="colorSwatches" style={{ background: color3 }}>
-                        {color3}
-                    </div>
-                    }
-                    {(color4 !== null) &&
-                    <div className="colorSwatches" style={{ background: color4 }}>
-                        {color4}
-                    </div>
-                    }
                 </div>
-            </div>
             </ThemeProvider>
         );
     }
