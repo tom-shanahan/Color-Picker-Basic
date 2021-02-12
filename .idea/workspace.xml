@@ -5,11 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ColorEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ColorEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HueSpectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HueSpectrum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RelatedColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RelatedColors.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +120,7 @@
       <workItem from="1611101529847" duration="589000" />
       <workItem from="1612983852029" duration="99000" />
       <workItem from="1612984091914" duration="6034000" />
-      <workItem from="1613066817816" duration="21399000" />
+      <workItem from="1613066817816" duration="22697000" />
     </task>
     <task id="LOCAL-00001" summary="adding color swatches">
       <created>1608174478659</created>
@@ -225,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609282051156</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="adding support for various screen sizes">
+      <created>1613093437718</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1613093437718</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +245,8 @@
     <MESSAGE value="removing background padding" />
     <MESSAGE value="renaming" />
     <MESSAGE value="some format updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="some format updates" />
+    <MESSAGE value="adding support for various screen sizes" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding support for various screen sizes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

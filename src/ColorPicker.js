@@ -89,7 +89,7 @@ class ColorPicker extends Component {
 
         return (
             <Box style={{ 'background':'slategrey', minHeight: '100vh',minWidth: '100vw',paddingBottom:'10vh' }}>
-                <Grid container spacing={3} className='grid-container'>
+                <Grid container className='grid-container'>
                     <Grid item xs={12} className='grid-element'>
                         <div className='container' style={{ paddingTop:'5px', marginTop:'5px' }}>
                             <h1 className="vectro" >

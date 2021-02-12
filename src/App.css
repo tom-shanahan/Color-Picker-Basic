@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.input-group {
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+
 @media only screen and (min-width: 900px) {
     .input-group {
-        padding: 5px;
+        padding-right: 15px!important;
+        padding-bottom: 15px!important;
     }
     .sat-hue-element {
         margin-left: 3vw;
     }
 }
-
 @media only screen and (min-width: 1000px) {
     .sat-hue-element {
         margin-left: 5vw;
     }
 }
-
 @media only screen and (min-width: 1080px) {
     .sat-hue-element {
         margin-left: 8vw;
